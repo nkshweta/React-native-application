@@ -1,7 +1,13 @@
 import {StyleSheet} from 'react-native';
 
 export const styles = StyleSheet.create({
-  item: {fontSize: 18, paddingHorizontal: 12, paddingVertical: 12},
+  item: {
+    fontWeight: 'bold',
+    fontSize: 20,
+    paddingHorizontal: 12,
+    paddingVertical: 12,
+  },
+  subItem: {fontSize: 18, paddingHorizontal: 12, paddingVertical: 12},
   container: {
     borderWidth: StyleSheet.hairlineWidth,
     borderColor: '#009690',

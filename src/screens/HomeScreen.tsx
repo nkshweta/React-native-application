@@ -8,7 +8,6 @@ const HomeScreen = () => {
   const [filteredDataSource, setFilteredDataSource] = useState([]);
   const [masterDataSource, setMasterDataSource] = useState([]);
   const navigation = useNavigation();
-
   useEffect(() => {
     fetch('http://api.tvmaze.com/search/shows?q=postman')
       .then((response: any) => response.json())
@@ -51,12 +50,14 @@ const HomeScreen = () => {
       <Pressable
         onPress={() =>
           navigation.navigate('Details', {
-            name: item && item.show && item.show.name ? item.show.name : '',
+            item: item,
           })
         }>
         <View style={styles.container}>
           <Text style={styles.item}>Name: {item.show.name}</Text>
-          <Text style={styles.item}>Genre: {item.show.genres}</Text>
+          <Text style={styles.subItem}>
+            Genre: {item.show.genres.toString()}
+          </Text>
         </View>
       </Pressable>
     );
