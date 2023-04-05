@@ -18,6 +18,9 @@ from application:
 
 1. Download the source code.
 2. run > "npm install" to install dependencies.
-3. run > "npm start react-native" to run the application. 
-4. Open another terminal, run > "npx react-native run-android" to install and launch the application on the emulator. 
+3. For Android OS, run > "pod install". This one is for viewing show details as a web page. 
+4. run > "npm start react-native" to run the application. 
+5. Open another terminal, run > "npx react-native run-android" to install and launch the application on the emulator. 
+
+
 
