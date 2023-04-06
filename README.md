@@ -25,7 +25,7 @@ from application:
 
 Updates as on 6th April 2023:
 Current application functionality:
-1. Current application lists and give option to search through the list of shows. 
+1. Current application lists and give option to search through the list of shows by their names. 
 2. All the shows part of "http://api.tvmaze.com/search/shows?q=postman" API as shown as a list in the home screen of the application. 
 3. User can click on favorite icon to add the show to wishlist. 
 4. an option to show the wishlisted shows in an alert modal. 
@@ -38,8 +38,9 @@ What could have been better:
 
 what more can be done:
 1. Wishlist can be shown in a seperate screen. 
-2. Implement REDUX STORE for better state management. 
-3. Option to remove item from wish list. 
+2. serach can be enhanced to include more fields.
+3. Implement REDUX STORE for better state management. 
+4. Option to remove item from wish list. 
 
 
 Limitations:
