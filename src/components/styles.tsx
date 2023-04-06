@@ -58,7 +58,7 @@ export const styles = StyleSheet.create({
     borderRadius: 4,
     elevation: 3,
     width: 150,
-    backgroundColor: 'black',
+    backgroundColor: 'grey',
     paddingBottom: 20,
     marginLeft: 5,
     marginBottom: 10,

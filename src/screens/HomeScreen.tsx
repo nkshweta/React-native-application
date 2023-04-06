@@ -58,6 +58,20 @@ const HomeScreen = () => {
     }
   };
 
+  const wishlistedItem = (showId: any) => {
+    var currentWishList = wishList;
+    if (showId) {
+      // Get the selected show from masterDataSource and update wishList..
+      const newData = masterDataSource.filter(function (item: any) {
+        return item && item.show && item.show.id && item.show.id === showId;
+      });
+      if (!currentWishList.includes(newData[0])) {
+        return false;
+      }
+    }
+    return true;
+  };
+
   const updateWishList = (showId: string) => {
     var currentWishList = wishList;
     if (showId) {
@@ -83,10 +97,18 @@ const HomeScreen = () => {
             }}>
             <Text style={styles.item}>Name: {item.show.name}</Text>
 
-            <Image
-              source={require('../images/wishlist.png')}
-              style={styles.imageView}
-            />
+            {wishlistedItem(item.show.id) && (
+              <Image
+                source={require('../images/wishlisted.png')}
+                style={styles.imageView}
+              />
+            )}
+            {!wishlistedItem(item.show.id) && (
+              <Image
+                source={require('../images/wishlist.png')}
+                style={styles.imageView}
+              />
+            )}
           </Pressable>
         </View>
         <View style={styles.detailsLink}>
