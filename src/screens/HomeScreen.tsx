@@ -79,10 +79,15 @@ const HomeScreen = () => {
       const newData = masterDataSource.filter(function (item: any) {
         return item && item.show && item.show.id && item.show.id === showId;
       });
-      if (!currentWishList.includes(newData[0])) {
+      if (newData.length > 0 && !currentWishList.includes(newData[0])) {
         currentWishList.push(newData[0]);
-        setWishList(currentWishList);
+      } else {
+        currentWishList = wishList.filter(function (item: any) {
+          // remove item from wishlist..
+          return item && item.show && item.show.id && item.show.id !== showId;
+        });
       }
+      setWishList([...currentWishList]); // Update the state with a new copy of currentWishList
     }
   };
 
