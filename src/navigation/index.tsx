@@ -3,6 +3,7 @@ import {NavigationContainer} from '@react-navigation/native';
 
 import HomeStackNavigator from './homeStack';
 
+// Entryt point for the application.
 const RootNavigator = () => {
   return (
     <NavigationContainer>
