@@ -47,3 +47,6 @@ Limitations:
 1. IOS platform testing is not done due to unavailability of the environment. 
 
 
+Updates on 11th April 2023:
+ Clicking on the favorite icon to add item to wishlist reflect immediately on the screen.  --This issue has been fixed along with Option to remove item from wish list. 
+
